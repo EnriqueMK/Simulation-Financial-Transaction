@@ -1,10 +1,10 @@
 package model;
 
-import validation.Cliente.CpfValidar;
-import validation.Cliente.EnderecoValidar;
-import validation.Cliente.NomeValidar;
-import validation.Cliente.TelefoneValidar;
-import validation.Credito.CartaoCreditoValidar;
+import validation.client.CpfValidar;
+import validation.client.EnderecoValidar;
+import validation.client.NomeValidar;
+import validation.client.TelefoneValidar;
+import validation.credit.CartaoCreditoValidar;
 
 public class Cliente {
 

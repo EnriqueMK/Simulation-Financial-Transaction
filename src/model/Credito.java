@@ -4,7 +4,7 @@ import java.time.YearMonth;
 import java.util.concurrent.ThreadLocalRandom;
 
 import service.ProcessarTransacao;
-import validation.Credito.LimiteCreditoValidar;
+import validation.credit.LimiteCreditoValidar;
 
 public class Credito implements Cartao {
 
