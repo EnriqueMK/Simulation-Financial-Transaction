@@ -8,12 +8,14 @@ import validation.credit.CartaoCreditoValidar;
 
 public class Cliente {
 
+    // Atributos do Cliente
     private String nome;
     private String cpf;
     private String telefone;
     private String endereco;
     private Cartao cartao;
 
+    // Método Construtor do Cliente
     public Cliente(String nome, String cpf, String telefone, String endereco) {
         this.nome = NomeValidar.validar(nome);
         this.cpf = CpfValidar.validar(cpf);
@@ -55,6 +57,7 @@ public class Cliente {
         return cartao;
     }
 
+    // Exibe o cadastro do Cliente
     public void cadastroCliente() {
         System.out.println("\nOlá " + getNome() + " Sejá Bem-vindo ao seu Banco!");
         System.out.println("=================================");

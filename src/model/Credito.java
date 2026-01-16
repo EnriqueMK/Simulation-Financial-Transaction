@@ -8,6 +8,7 @@ import validation.credit.LimiteCreditoValidar;
 
 public class Credito implements Cartao {
 
+    // Atributos do Crédito 
     private Cliente cliente;
     private final String numero;
     private final YearMonth vencimento;
@@ -15,6 +16,7 @@ public class Credito implements Cartao {
     private double limite;
     private double limiteDisponivel;
     
+    // Método construtor do Cartão
     public Credito(Cliente cliente, double limite) {
         this.cliente = cliente;
 
@@ -59,10 +61,13 @@ public class Credito implements Cartao {
         this.limiteDisponivel = limiteDisponivel;
     }
 
+    // Tipo do Cartão
     @Override
     public String getTipo() {
         return "Crédito";
     }
+
+    // Método para exibir informações do Cartão do cliente selecionado
     @Override
     public void informacoesCartao() {
         System.out.println("\nCADASTRO DO SEU CARTÃO DE CRÉDITO");
@@ -74,7 +79,7 @@ public class Credito implements Cartao {
         System.out.println();
     }
 
-    // Necessário criar validador de transação
+    // Validador para autorizar pagamento do Cliente selecionado
     @Override
     public boolean autorizarPagamento(double valor) {
         return ProcessarTransacao.processamento(this, valor);
