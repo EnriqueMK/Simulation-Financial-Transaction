@@ -5,4 +5,5 @@ public interface Cartao {
     String getTipo();
     void informacoesCartao();
     boolean autorizarPagamento(double valor);
+    void atualizarLimite(double limite);
 }

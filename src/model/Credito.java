@@ -67,7 +67,7 @@ public class Credito implements Cartao {
         return "Crédito";
     }
 
-    // Método para exibir informações do Cartão do cliente selecionado
+    // Método para exibir informações do Cartão do Cliente vinculado
     @Override
     public void informacoesCartao() {
         System.out.println("\nCADASTRO DO SEU CARTÃO DE CRÉDITO");
@@ -79,9 +79,15 @@ public class Credito implements Cartao {
         System.out.println();
     }
 
-    // Validador para autorizar pagamento do Cliente selecionado
+    // Validador para autorizar pagamento do Cliente vinculado
     @Override
     public boolean autorizarPagamento(double valor) {
         return ProcessarTransacao.processamento(this, valor);
+    }
+
+    // Atualiza o limite atual do Crédito do Cliente vinculado
+    @Override
+    public void atualizarLimite(double limite) {
+        LimiteCreditoValidar.validar(limite);
     }
 }

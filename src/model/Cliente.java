@@ -58,7 +58,7 @@ public class Cliente {
     }
 
     // Exibe o cadastro do Cliente
-    public void cadastroCliente() {
+    public void informacoesCliente() {
         System.out.println("\nOlá " + getNome() + " Sejá Bem-vindo ao seu Banco!");
         System.out.println("=================================");
         System.out.println("SEU CADASTRO");
