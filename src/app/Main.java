@@ -9,15 +9,15 @@ public class Main {
             Cliente cliente = new Cliente("Enrique", "50690239858", "11968746930", "Rua Vulnarária, 58");
             Credito credito = new Credito(cliente, 1000);
             cliente.adicionarCartao(credito);
-
             credito.informacoesCartao();
 
-            credito.autorizarPagamento(200);
+            credito.autorizarPagamento(300);
             credito.informacoesCartao();
 
-            credito.atualizarLimite(400);
+            credito.atualizarLimite(500);
             credito.informacoesCartao();
 
+            
 
             
         } catch (IllegalArgumentException erro) {

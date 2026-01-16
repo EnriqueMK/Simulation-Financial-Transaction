@@ -7,8 +7,8 @@ public final class ProcessarTransacao {
     
     private ProcessarTransacao() {}
 
-    public static boolean processamento(Credito cartao, double valor) {
-        YearMonth venc = cartao.getVencimento();
+    public static boolean processamento(Credito credito, double valor) {
+        YearMonth venc = credito.getVencimento();
         YearMonth dataAtual = YearMonth.now();
 
         if (valor <= 0) {
@@ -17,12 +17,12 @@ public final class ProcessarTransacao {
         if (venc.isBefore(dataAtual)) {
             throw new IllegalArgumentException("Cartão vencido!");
         }
-        if (valor > cartao.getLimiteDisponivel()) {
+        if (valor > credito.getLimiteDisponivel()) {
             throw new IllegalArgumentException("Transferência recusada! Limite indisponível.");
         }
 
-        double limiteAtual = cartao.getLimiteDisponivel() - valor;
-        cartao.setLimiteDisponivel(limiteAtual);
+        double limiteAtual = credito.getLimiteDisponivel() - valor;
+        credito.setLimiteDisponivel(limiteAtual);
         return true;
     }
 }

@@ -29,7 +29,7 @@ public class Credito implements Cartao {
 
         this.vencimento = venc;
         this.cvv = ThreadLocalRandom.current().nextInt(100, 1000);
-        this.limite = LimiteCreditoValidar.validar(limite);
+        this.limite = LimiteCreditoValidar.validar(this, limite);
         this.limiteDisponivel = limite;
     }
 
@@ -88,6 +88,6 @@ public class Credito implements Cartao {
     // Atualiza o limite atual do Crédito do Cliente vinculado
     @Override
     public void atualizarLimite(double limite) {
-        LimiteCreditoValidar.validar(limite);
+        LimiteCreditoValidar.validar(this, limite);
     }
 }
