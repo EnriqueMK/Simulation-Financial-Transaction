@@ -1,5 +1,7 @@
 package model;
 
+import javax.swing.JOptionPane;
+
 import validation.client.CpfValidar;
 import validation.client.EnderecoValidar;
 import validation.client.NomeValidar;
@@ -59,11 +61,13 @@ public class Cliente {
 
     // Exibe o cadastro do Cliente
     public void informacoesCliente() {
-        System.out.println("\nOlá " + getNome() + " Sejá Bem-vindo ao seu Banco!");
-        System.out.println("=================================");
-        System.out.println("SEU CADASTRO");
-        System.out.println("Nome: " + getNome());
-        System.out.println("CPF: " + getCpf());
-        System.out.println("Telefone: " + getTelefone());
+        String menu = "Olá " + getNome() + "Sejá Bem-vindo ao seu Banco!\n" + 
+        "=================================\n" + 
+        "SEU CADASTRO\n" + 
+        "Nome: " + getNome() + "\n" + 
+        "CPF: " + getCpf() + "\n" +
+        "Telefone: " + getTelefone();
+
+        JOptionPane.showMessageDialog(null, menu);
     }
 }
