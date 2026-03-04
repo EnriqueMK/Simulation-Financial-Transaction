@@ -1,5 +1,6 @@
 package model;
 
+import javax.swing.JOptionPane;
 import java.time.YearMonth;
 import java.util.concurrent.ThreadLocalRandom;
 
@@ -70,13 +71,14 @@ public class Credito implements Cartao {
     // Método para exibir informações do Cartão do cliente selecionado
     @Override
     public void informacoesCartao() {
-        System.out.println("\nCADASTRO DO SEU CARTÃO DE CRÉDITO");
-        System.out.println("Número do Cartão: " + getNumero());
-        System.out.println("CVV: " + getCvv());
-        System.out.println("Vencimento: " + getVencimento());
-        System.out.println("Limite Liberado: " + getLimite());
-        System.out.println("Limite Disponível " + getLimiteDisponivel());
-        System.out.println();
+        String menu = "\nINFORMAÇÕES DO SEU CARTÃO DE CRÉDITO\n" +
+        "Número do Cartão: " + getNumero() + "\n" +
+        "CVV: " + getCvv() + "\n" +
+        "Vencimento: " + getVencimento() + "\n" +
+        "Limite Liberado: R$" + String.format("%.2f\n", getLimite()) +
+        "Limite Disponível: R$" + String.format("%.2f\n", getLimiteDisponivel());
+
+        JOptionPane.showMessageDialog(null, menu);
     }
 
     // Validador para autorizar pagamento do Cliente selecionado
