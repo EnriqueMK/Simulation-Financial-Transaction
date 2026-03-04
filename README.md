@@ -27,9 +27,9 @@ O projeto utiliza uma organização de branches para facilitar o monitoramento, 
 
 <h2>⚙️ Mecanismos</h2>
 
-- Cadastrar clientes
+- Cadastrar cliente
 - Cadastrar cartão
-- Vincular cartão
-- Armazenar cadastro 
-- Armazenar transações 
+- Vincular cliente com cartão
+- Controlar limites de crédito
+- Processar tranferências
 
