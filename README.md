@@ -56,8 +56,6 @@ O sistema é estruturado com separação clara entre:
 - **Validações/Service**s → Regras de negócio e verificações
 - **Camada de execução** → Simulação do fluxo principal
 
-<br><br>
-
 Essa divisão permite:
 
 - Maior manutenibilidade
